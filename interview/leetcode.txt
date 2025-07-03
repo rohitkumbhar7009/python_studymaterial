@@ -1,0 +1,171 @@
+✅ 1. Two Sum
+🔹 Problem: Find two numbers that add up to a target.
+
+📘 English: You're given an array and a target. Return the indices of the two numbers that add up to the target.
+
+📙 Hindi: आपको एक array और एक target दिया गया है। आपको उन दो numbers के index वापस करने हैं जिनका जोड़ target के बराबर हो।
+
+python
+Copy
+Edit
+def twoSum(nums, target):
+    hashmap = {}
+    for i, num in enumerate(nums):
+        diff = target - num
+        if diff in hashmap:
+            return [hashmap[diff], i]
+        hashmap[num] = i
+✅ 2. Reverse a String
+🔹 Problem: Reverse the input string.
+
+📘 English: Take a string and return its reverse.
+
+📙 Hindi: एक string लो और उसे उल्टा (reverse) करके वापस करो।
+
+python
+Copy
+Edit
+def reverseString(s):
+    return s[::-1]
+✅ 3. Palindrome Number
+🔹 Problem: Check if a number is a palindrome.
+
+📘 English: A number is a palindrome if it reads the same forward and backward (like 121).
+
+📙 Hindi: कोई संख्या Palindrome है अगर वो आगे से और पीछे से पढ़ने पर एक जैसी हो (जैसे 121)।
+
+python
+Copy
+Edit
+def isPalindrome(x):
+    return str(x) == str(x)[::-1]
+✅ 4. Valid Anagram
+🔹 Problem: Check if two strings are anagrams.
+
+📘 English: Two strings are anagrams if they contain the same characters in a different order.
+
+📙 Hindi: दो strings anagram होती हैं अगर दोनों में वही अक्षर हों लेकिन क्रम अलग हो।
+
+python
+Copy
+Edit
+def isAnagram(s, t):
+    return sorted(s) == sorted(t)
+✅ 5. Maximum Subarray (Kadane's Algorithm)
+🔹 Problem: Find the subarray with the maximum sum.
+
+📘 English: Given an array, find the continuous subarray that gives the highest sum.
+
+📙 Hindi: Array में से वह हिस्सा (subarray) ढूंढो जिसका जोड़ सबसे ज्यादा हो।
+
+python
+Copy
+Edit
+def maxSubArray(nums):
+    max_sum = current = nums[0]
+    for num in nums[1:]:
+        current = max(num, current + num)
+        max_sum = max(max_sum, current)
+    return max_sum
+✅ 6. Merge Two Sorted Lists
+🔹 Problem: Merge two sorted linked lists.
+
+📘 English: Combine two sorted linked lists into one sorted list.
+
+📙 Hindi: दो sorted linked lists को मिलाकर एक sorted list बनाओ।
+
+python
+Copy
+Edit
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def mergeTwoLists(l1, l2):
+    dummy = ListNode()
+    tail = dummy
+    while l1 and l2:
+        if l1.val < l2.val:
+            tail.next = l1
+            l1 = l1.next
+        else:
+            tail.next = l2
+            l2 = l2.next
+        tail = tail.next
+    tail.next = l1 or l2
+    return dummy.next
+✅ 7. Best Time to Buy and Sell Stock
+🔹 Problem: Maximize profit by buying and selling once.
+
+📘 English: Buy low, sell high. Return the maximum profit possible.
+
+📙 Hindi: एक बार खरीदो और एक बार बेचो ताकि ज्यादा मुनाफा हो सके।
+
+python
+Copy
+Edit
+def maxProfit(prices):
+    min_price = float('inf')
+    profit = 0
+    for price in prices:
+        min_price = min(min_price, price)
+        profit = max(profit, price - min_price)
+    return profit
+✅ 8. Remove Duplicates from Sorted Array
+🔹 Problem: Remove duplicates in-place from a sorted array.
+
+📘 English: From a sorted array, remove all duplicate elements.
+
+📙 Hindi: एक sorted array से सारे duplicate हटाओ, लेकिन उसी array में (in-place)।
+
+python
+Copy
+Edit
+def removeDuplicates(nums):
+    if not nums:
+        return 0
+    i = 0
+    for j in range(1, len(nums)):
+        if nums[j] != nums[i]:
+            i += 1
+            nums[i] = nums[j]
+    return i + 1
+✅ 9. Valid Parentheses
+🔹 Problem: Check if brackets are balanced.
+
+📘 English: Make sure each opening bracket has a closing pair.
+
+📙 Hindi: हर opening bracket के लिए एक matching closing bracket होना चाहिए।
+
+python
+Copy
+Edit
+def isValid(s):
+    stack = []
+    mapping = {')':'(', ']':'[', '}':'{'}
+    for char in s:
+        if char in mapping:
+            top = stack.pop() if stack else '#'
+            if mapping[char] != top:
+                return False
+        else:
+            stack.append(char)
+    return not stack
+✅ 10. Climbing Stairs
+🔹 Problem: You can climb 1 or 2 steps at a time. How many ways to reach the top?
+
+📘 English: Classic dynamic programming problem. Like Fibonacci.
+
+📙 Hindi: एक बार में 1 या 2 स्टेप चढ़ सकते हो। टॉप तक पहुँचने के कितने तरीके हैं?
+
+python
+Copy
+Edit
+def climbStairs(n):
+    if n <= 2:
+        return n
+    first, second = 1, 2
+    for _ in range(3, n+1):
+        first, second = second, first + second
+    return second

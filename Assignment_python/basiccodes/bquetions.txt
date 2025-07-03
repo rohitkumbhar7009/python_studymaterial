@@ -1,0 +1,202 @@
+1. What is Python and why is it popular?
+Answer:
+Python is a programming language used to build websites, apps, games, AI, and more.
+It’s popular because:
+
+It's easy to read (like English).
+
+It has many built-in tools and libraries.
+
+Big companies like Google, YouTube, and Instagram use it.
+
+Example:
+Think of Python like a Swiss Army knife—you can do many things with it: cut, open bottles, fix screws (build apps, websites, AI, etc.).
+__________________________________________________________________________________________________________________________________________________________________________________
+
+2. What are variables in Python?
+Answer:
+A variable is a name we use to store something like a number, text, or list.
+
+Example:
+
+name = "John"
+age = 25
+__________________________________________________________________________________________________________________________________________________________________________________
+
+
+3. What are the different data types in Python?
+Answer:
+
+int → Numbers like 1, 2, 100
+
+float → Decimal numbers like 3.14
+
+str → Text like "Hello"
+
+bool → True or False
+
+list, tuple, dict → Group of items
+
+__________________________________________________________________________________________________________________________________________________________________________________
+
+
+4. What is the difference between a list and a tuple?
+Answer:
+
+List: Can change (mutable) → []
+
+Tuple: Can’t change (immutable) → ()
+
+Example:
+
+my_list = [1, 2, 3]
+my_tuple = (1, 2, 3)
+
+__________________________________________________________________________________________________________________________________________________________________________________
+
+
+5. What is a dictionary in Python?
+Answer:
+A dictionary stores data in key-value pairs.
+
+Example:
+
+student = {"name": "Alice", "age": 20}
+
+__________________________________________________________________________________________________________________________________________________________________________________
+
+
+
+6. What is the difference between is and ==?
+Answer:
+
+== checks values
+
+is checks memory location
+
+Example:
+
+
+a = [1, 2]
+b = [1, 2]
+print(a == b)  # True
+print(a is b)  # False
+__________________________________________________________________________________________________________________________________________________________________________________
+
+
+7. What is indentation and why is it important?
+Answer:
+Indentation means spaces before code lines. Python uses it to define code blocks. No indentation = error.
+
+
+if age > 18:
+    print("Adult")  # this line is indented
+
+__________________________________________________________________________________________________________________________________________________________________________________
+
+
+8. What are functions in Python?
+Answer:
+A function is a block of code that does something when called.
+
+Example:
+
+def greet():
+    print("Hello!")
+greet()
+
+__________________________________________________________________________________________________________________________________________________________________________________
+
+
+9. What is the use of the return statement?
+Answer:
+It sends back a value from a function.
+
+Example:
+
+
+def add(a, b):
+    return a + b
+
+__________________________________________________________________________________________________________________________________________________________________________________
+
+
+10. What is a module in Python?
+Answer:
+A module is a file with Python code. We use modules to reuse code.
+
+Example:
+
+import math
+print(math.sqrt(16))  # uses math module
+
+__________________________________________________________________________________________________________________________________________________________________________________
+
+
+11. What is a loop? Difference between for and while loop?
+Answer:
+Loop runs the same code multiple times.
+
+for → used when we know how many times to run
+
+while → runs until condition becomes false
+
+for i in range(3):
+    print("Hi")
+
+i = 0
+while i < 3:
+    print("Hi")
+    i += 1
+    
+__________________________________________________________________________________________________________________________________________________________________________________
+   
+12. What are conditional statements in Python?
+Answer:
+Used to make decisions.
+
+age = 18
+if age >= 18:
+    print("Adult")
+else:
+    print("Child")
+
+__________________________________________________________________________________________________________________________________________________________________________________
+
+13. What is the use of break, continue, pass?
+Answer:
+
+break: Stops the loop
+
+continue: Skips current loop step
+
+pass: Does nothing (used as placeholder)
+
+__________________________________________________________________________________________________________________________________________________________________________________
+
+
+14. What are arguments and parameters in a function?
+Answer:
+
+Parameters are the names in the function definition.
+
+Arguments are the actual values we pass.
+
+
+def greet(name):  # name is parameter
+    print("Hi", name)
+
+greet("Alice")  # "Alice" is argument
+
+__________________________________________________________________________________________________________________________________________________________________________________
+
+15. What is exception handling?
+Answer:
+It prevents the program from crashing when an error happens.
+
+
+try:
+    x = 1 / 0
+except ZeroDivisionError:
+    print("Can't divide by zero")
+__________________________________________________________________________________________________________________________________________________________________________________

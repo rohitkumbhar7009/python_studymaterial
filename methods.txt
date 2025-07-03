@@ -1,0 +1,142 @@
+## Quick Understanding of Python Methods (With Hindi Explanation)
+
+### **1. What is a Method?**
+- A **method** is a function that belongs to an object.
+- It performs a specific task using the object's data.
+- Methods are called using **dot notation** (`object.method()`).
+
+**Example:**
+```python
+text = 'hello world'
+print(text.upper())
+```
+**Output:** `HELLO WORLD`
+
+**Hindi Explanation:**
+Method ek function hai jo kisi object ka hissa hota hai. Yeh object ke data par kaam karta hai.
+
+---
+
+### **2. Types of Methods**
+- **Instance Methods**: Operate on object instances.
+- **Class Methods**: Operate on class-level data using `@classmethod`.
+- **Static Methods**: Independent of class or object data using `@staticmethod`.
+
+**Example:**
+```python
+class Example:
+    def instance_method(self):
+        print('Instance Method')
+
+    @classmethod
+    def class_method(cls):
+        print('Class Method')
+
+    @staticmethod
+    def static_method():
+        print('Static Method')
+
+obj = Example()
+obj.instance_method()
+Example.class_method()
+Example.static_method()
+```
+
+**Hindi Explanation:**
+- **Instance Method** object ke upar kaam karta hai.
+- **Class Method** class ke upar kaam karta hai.
+- **Static Method** bina kisi object ya class data ke kaam karta hai.
+
+---
+
+### **3. Common Python Methods**
+
+#### **String Methods**
+- `.upper()` - Convert to uppercase.
+- `.lower()` - Convert to lowercase.
+- `.strip()` - Remove spaces.
+- `.replace()` - Replace text.
+
+**Example:**
+```python
+text = ' Hello Python '
+print(text.strip().upper().replace('PYTHON', 'AI'))
+```
+**Output:** `HELLO AI`
+
+**Hindi Explanation:**
+Yeh methods string ko modify karte hain jaise ki case conversion, space remove karna, ya text replace karna.
+
+---
+
+#### **List Methods**
+- `.append()` - Add item to the end.
+- `.remove()` - Remove item by value.
+- `.sort()` - Sort list.
+- `.reverse()` - Reverse list order.
+
+**Example:**
+```python
+numbers = [5, 1, 8, 3]
+numbers.append(10)
+numbers.sort()
+numbers.reverse()
+print(numbers)
+```
+**Output:** `[10, 8, 5, 3, 1]`
+
+**Hindi Explanation:**
+List methods se hum elements add, remove, sort aur reverse kar sakte hain.
+
+---
+
+#### **Dictionary Methods**
+- `.keys()` - Get all keys.
+- `.values()` - Get all values.
+- `.items()` - Get key-value pairs.
+- `.get()` - Get value by key.
+
+**Example:**
+```python
+data = {'name': 'Rohit', 'age': 25}
+print(data.keys())
+print(data.values())
+print(data.get('name'))
+```
+**Output:**
+```
+dict_keys(['name', 'age'])
+dict_values(['Rohit', 25])
+Rohit
+```
+
+**Hindi Explanation:**
+Dictionary methods se hum keys, values aur key-value pairs ko retrieve kar sakte hain.
+
+---
+
+### **4. Custom Methods**
+- You can create your own methods using functions within classes.
+
+**Example:**
+```python
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def introduce(self):
+        print(f'My name is {self.name} and I am {self.age} years old.')
+
+p1 = Person('Rohit', 25)
+p1.introduce()
+```
+**Output:** `My name is Rohit and I am 25 years old.`
+
+**Hindi Explanation:**
+Custom methods aapke class ke andar define ki jati hain taaki objects ke upar operations perform kiya ja sake.
+
+---
+
+This overview provides a quick understanding of Python methods with practical examples. Practice these methods to become comfortable in using Python efficiently!
+

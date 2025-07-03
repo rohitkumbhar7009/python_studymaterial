@@ -1,0 +1,49 @@
+What is Python and why is it popular?
+
+What are variables in Python?
+
+What are the different data types in Python?
+
+What is the difference between a list and a tuple?
+
+What is a dictionary in Python?
+
+What is the difference between is and == in Python?
+
+What are functions in Python?
+
+What is the use of the return statement?
+
+What is a module in Python?
+
+What is a loop? Differentiate between for and while loops.
+
+What are conditional statements in Python?
+
+What is the use of break, continue, and pass?
+
+What are arguments and parameters in a function?
+
+What is exception handling? What are try, except blocks used for?    
+
+
+
+# Coding Quetion 
+
+Print “Hello, World!” in Python.
+
+Write a Python program to swap two numbers.
+
+Write a program to check if a number is even or odd.
+
+Write a program to find the largest of three numbers.
+
+Write a program to check if a number is prime.
+
+Write a program to reverse a string. 
+
+Write a program to count the number of vowels in a string.
+
+Write a function that takes two numbers and returns their sum.
+
+Write a program to remove duplicates from a list.
